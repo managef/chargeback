@@ -1,0 +1,6 @@
+hash: 7851bf047e322a33bb9c58d401df8875863239f467882f627be9036a2ad20460
+updated: 2018-03-10T18:45:33.984256948+01:00
+imports:
+- name: github.com/leekchan/accounting
+  version: 68e54ba46cf7a77532354c6f4cc0fac3bfbe5095
+testImports: []
