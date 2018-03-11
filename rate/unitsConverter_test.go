@@ -116,39 +116,39 @@ func TestToUnit(t *testing.T) {
 	actual := toUnit(7, "", "", allPrefix)
 	expected := float64(7)
 	if actual != expected {
-		t.Errorf("Expected toUnit SI_SIMBOL to be %s and the result is %+v", expected, actual)
+		t.Errorf("Expected toUnit SI_SIMBOL to be %f and the result is %f", expected, actual)
 	}
 	actual = toUnit(7, "KB", "", allPrefix)
 	expected = float64(7000)
 	if actual != expected {
-		t.Errorf("Expected toUnit SI_SIMBOL to be %s and the result is %+v", expected, actual)
+		t.Errorf("Expected toUnit SI_SIMBOL to be %f and the result is %f", expected, actual)
 	}
 
 	// BINARY symbol returns value in base unit
 	actual = toUnit(7, "KiB", "", binaryPrefix)
 	expected = float64(7168)
 	if actual != expected {
-		t.Errorf("Expected toUnit SI_SIMBOL to be %s and the result is %+v", expected, actual)
+		t.Errorf("Expected toUnit SI_SIMBOL to be %f and the result is %f", expected, actual)
 	}
 
 	// SI symbol returns value in destination unit
 	actual = toUnit(7, "MB", "KB", allPrefix)
 	expected = float64(7000)
 	if actual != expected {
-		t.Errorf("Expected toUnit SI_SIMBOL to be %s and the result is %+v", expected, actual)
+		t.Errorf("Expected toUnit SI_SIMBOL to be %f and the result is %f", expected, actual)
 	}
 
 	// BINARY symbol returns value in destination unit
 	actual = toUnit(7, "PiB", "TiB", binaryPrefix)
 	expected = float64(7168)
 	if actual != expected {
-		t.Errorf("Expected toUnit binaryPrefix to be %s and the result is %+v", expected, actual)
+		t.Errorf("Expected toUnit binaryPrefix to be %f and the result is %f", expected, actual)
 	}
 
 	// SI symbol returns value in destination unit
 	actual = toUnit(7, "PB", "TiB", allPrefix)
 	expected = float64(6366.462912410498)
 	if actual != expected {
-		t.Errorf("Expected toUnit allPrefix to be %s and the result is %+v", expected, actual)
+		t.Errorf("Expected toUnit allPrefix to be %f and the result is %f", expected, actual)
 	}
 }
