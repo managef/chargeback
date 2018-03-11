@@ -1,0 +1,4 @@
+package: github.com/managef/models
+import:
+- package: github.com/leekchan/accounting
+  version: 68e54ba46cf7a77532354c6f4cc0fac3bfbe5095
